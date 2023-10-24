@@ -9,7 +9,7 @@ Simple translator tool.
 def translate():
     arg = ArgumentParser(description=desc, allow_abbrev=False, add_help=False)
     arg.add_argument("-h", "--help", action="help", help="Display this message")
-    arg.add_argument("-e". "--engine", type=str, help="Engine to use")
+    arg.add_argument("-e", "--engine", type=str, help="Engine to use")
     arg.add_argument("-s", "--source", type=str, help="Source Language to translate")
     arg.add_argument("-t", "--target", type=str, help="Target Language to translate")
     arg.add_argument("-txt", "--text", type=str, help="Text to translate")
