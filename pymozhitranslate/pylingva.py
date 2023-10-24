@@ -1,5 +1,4 @@
 #! /usr/bin/env python
-import itertools
 import random
 import json
 import requests as req
