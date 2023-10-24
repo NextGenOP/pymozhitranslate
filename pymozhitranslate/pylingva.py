@@ -47,7 +47,7 @@ class Translator:
             "text": quote(text)
         }
         url = self.build_url("translate", query_params)
-        print(url)
+        # print(url)
         r = req.get(url)
         r = r.json()
         result = r['translated-text']
