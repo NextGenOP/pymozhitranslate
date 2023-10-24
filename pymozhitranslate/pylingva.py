@@ -1,6 +1,7 @@
 #! /usr/bin/env python
 import itertools
 import random
+import json
 import requests as req
 from urllib.parse import quote
 
@@ -32,13 +33,12 @@ class Translator:
             "engine": self.engine
         }
         url = self.build_url("source_languages", query_params)
-        all_languages = req.get(url)
-        all_languages = all_languages.json()
+        all_languages = req.get(url).json()
         lang = {}
-        for x in range(0, len(all_languages['languages'])):
-            list_code = all_languages['languages'][x]['Id']
-            list_name = all_languages['languages'][x]['Name']
-            lang.update({list_name: list_code})
+        for language in all_languages:
+            name = language['Name']
+            code = language['Id']
+            lang[name] = code
         return lang
 
     def translate(self, source, target, text):
