@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
-from pylingva.arg import ArgumentParser
-from pylingva import pylingva
+from pymozhitranslate.arg import ArgumentParser
+from pymozhitranslate import pymozhitranslate
 
 desc = """
 Simple translator tool.
