@@ -33,7 +33,7 @@ $ mozhitranslate -s auto -t id -txt "How are You ?"
 $ mozhitranslate -s auto -t id -txt "How are You ?" -o output.txt
  Translation result saved in output.txt
 
-$ translate -s auto -t id -f input.txt -o output.txt
+$ mozhitranslate -s auto -t id -f input.txt -o output.txt
  Translation result saved in output.txt
 ```
 
