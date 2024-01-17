@@ -51,19 +51,19 @@ class Translator:
             raise ValueError("Text is empty")
         
         # Check the maximum character limit for each translation engine
-        elif self.engine == "google" and text == "" > 5000:
+        elif self.engine == "google" and len(text) > 5000:
             raise ValueError("Google translate only supports up to 5000 characters")
         
-        elif self.engine == "duckduckgo" and text == "" > 1000:
+        elif self.engine == "duckduckgo" and len(text) > 1000:
             raise ValueError("Duckduckgo translate only supports up to 1000 characters")
         
-        elif self.engine == "deepl" and text == "" > 3000:
+        elif self.engine == "deepl" and len(text) > 3000:
             raise ValueError("Deepl translate only supports up to 3000 characters")
         
-        elif self.engine == "yandex" and text == "" > 10000:
+        elif self.engine == "yandex" and len(text) > 10000:
             raise ValueError("Yandex translate only supports up to 10000 characters")
         
-        elif self.engine == "watson" and text == "" > 5000:
+        elif self.engine == "watson" and len(text) > 5000:
             raise ValueError("Watson translate only supports up to 5000 characters")
         # print(f"Translating from {source} to {target}")
         query_params = {
