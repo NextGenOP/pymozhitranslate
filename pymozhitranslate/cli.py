@@ -17,8 +17,9 @@ def translate():
     arg.add_argument("-f", "--file",  help="Path file .txt to translate")
     arg.add_argument("-o", "--output",  help="Output file translation result")
     args = arg.parse_args()
-# if no args passed, show help
-    if not vars(args):
+
+    if args.text == None:
+        print("Text is empty")
         arg.print_help()
         exit()
     if args.engine:
